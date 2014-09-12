@@ -137,7 +137,7 @@ sudo service apache2 start
 # Create the database
 mysql -uroot -proot < /var/www/html/myapp/_build/vagrant/setup.sql
 
-# Permisions (somehow php tries to write session filies in that directory, that is read only)
+# Permisions (somehow php tries to write session files in that directory, that is read only)
 sudo chmod 1777 /var/lib/php5
 
 # And some ascii art
