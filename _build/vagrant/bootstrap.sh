@@ -140,6 +140,12 @@ mysql -uroot -proot < /var/www/html/myapp/_build/vagrant/setup.sql
 # Permisions (somehow php tries to write session filies in that directory, that is read only)
 sudo chmod 1777 /var/lib/php5
 
+# phpUnit
+wget https://phar.phpunit.de/phpunit.phar
+chmod +x phpunit.phar
+sudo mv phpunit.phar /usr/local/bin/phpunit
+sudo chmod +x phpunit.phar /usr/local/bin/phpunit
+
 # And some ascii art
 myArt() {
 cat <<"EOT"
