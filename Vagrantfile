@@ -27,6 +27,9 @@ Vagrant.configure("2") do |config|
   end
 
 
-  config.vm.synced_folder "./", "/var/www/html/myapp", id: "vagrant-root"
+  config.vm.synced_folder "./", "/var/www/html/myapp", id: "vagrant-root",
+    owner: "vagrant",
+    group: "www-data",
+    mount_options: ["dmode=775","fmode=664"]
   config.vm.provision :shell, :path => "_build/vagrant/bootstrap.sh"
 end

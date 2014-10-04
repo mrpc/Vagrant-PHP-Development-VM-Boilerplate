@@ -27,7 +27,7 @@ yes | add-apt-repository ppa:ondrej/php5
 apt-get update
 
 # Install requirements
-apt-get install -y apache2 build-essential checkinstall php5 php5-cli php5-mcrypt php5-gd php-apc git sqlite php5-sqlite curl php5-curl php5-dev php-pear php5-xdebug vim-nox ruby rubygems sqlite3 libsqlite3-dev memcached php5-memcache
+apt-get install -y apache2 build-essential checkinstall php5 php5-cli php5-mcrypt php5-gd php-apc git sqlite php5-sqlite curl php5-curl php5-dev php-pear php5-xdebug vim-nox ruby rubygems sqlite3 libsqlite3-dev memcached php5-memcache htop
 
 
 # Install MySQL
@@ -137,7 +137,7 @@ sudo service apache2 start
 # Create the database
 mysql -uroot -proot < /var/www/html/myapp/_build/vagrant/setup.sql
 
-# Permisions (somehow php tries to write session filies in that directory, that is read only)
+# Permisions (somehow php tries to write session files in that directory, that is read only)
 sudo chmod 1777 /var/lib/php5
 
 # phpUnit
