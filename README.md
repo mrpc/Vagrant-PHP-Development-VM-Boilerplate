@@ -9,6 +9,7 @@ A basic configuration for PHP development with vagrant. Based on precise64 box, 
  * The last version of phpMyAdmin (fetched by git, not the default apt-get version)
  * Composer
  * webgrind
+ * The last version of phpUnit
  * An SQL startup file to create your databases etc.
  * A php.ini file and a configuration file for phpMyAdmin
 
