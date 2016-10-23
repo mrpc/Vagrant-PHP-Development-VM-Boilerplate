@@ -117,10 +117,10 @@ sudo git clone --depth=1 --branch=STABLE git://github.com/phpmyadmin/phpmyadmin.
 
 # Configure phpMyAdmin
 sudo cp /var/www/html/myapp/_build/vagrant/phpmyadmin.php /var/www/html/phpmyadmin/config.inc.php
-sudo mysql -uroot -proot < /var/www/html/phpmyadmin/examples/create_tables.sql
+sudo mysql -uroot -proot < /var/www/html/phpmyadmin/sql/create_tables.sql
 
 # Additional PHP stuff (needs cleanup)
-sudo apt-get install -y php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
+sudo apt-get install -y php5-mysql php5-intl php5-imagick php5-imap php5-ps php5-pspell php5-recode php5-snmp php5-tidy php5-xmlrpc php5-xsl
 
 # Custom php.ini
 sudo rm /etc/php5/apache2/php.ini
