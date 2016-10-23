@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Vagrant PHP Development VM Boilerplate
-# Copyright (C) 2014  Yannis - Pastis Glaros
+# Copyright (C) 2014-2016  Yannis - Pastis Glaros
 # ------------------------------------------
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -120,7 +120,7 @@ sudo cp /var/www/html/myapp/_build/vagrant/phpmyadmin.php /var/www/html/phpmyadm
 sudo mysql -uroot -proot < /var/www/html/phpmyadmin/examples/create_tables.sql
 
 # Additional PHP stuff (needs cleanup)
-sudo apt-get install -y php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
+sudo apt-get install -y php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
 
 # Custom php.ini
 sudo rm /etc/php5/apache2/php.ini
@@ -144,7 +144,7 @@ sudo chmod 1777 /var/lib/php5
 wget https://phar.phpunit.de/phpunit.phar
 chmod +x phpunit.phar
 sudo mv phpunit.phar /usr/local/bin/phpunit
-sudo chmod +x phpunit.phar /usr/local/bin/phpunit
+sudo chmod +x /usr/local/bin/phpunit
 
 # And some ascii art
 myArt() {
